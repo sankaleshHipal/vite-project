@@ -1,0 +1,13 @@
+:root {
+  /* Define your theme's custom properties */
+  --primary-color: #FEFBEF;
+  --secondary-color: #183D2E;
+  --accent-color: #06080B;
+  --font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: var(--font-family);
+}
