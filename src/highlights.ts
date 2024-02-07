@@ -53,7 +53,7 @@ export class HighlightsContainer extends LitElement {
 
   render() {
     return html`
-      <hero-section .data=${data}></hero-section>
+      <hero-section ></hero-section>
       <div class="carousel-wrapper">
         ${this.highlights.map(
           (highlight) => html`

@@ -11,8 +11,7 @@ export interface HeroSectionData {
 
 @customElement('hero-section')
 export class HeroSection extends LitElement {
-    @property({ type: Object }) data: HeroSectionData = {};
-    // @property({ type: String }) businessName = '';
+  @property({ type: Object }) data: HeroSectionData = {};
 
   static styles = css`
     .hero-section-container {
@@ -68,6 +67,13 @@ export class HeroSection extends LitElement {
 `;
 connectedCallback() {
   super.connectedCallback();
+  if (typeof this.data === 'string') {
+      try {
+          this.data = JSON.parse(this.data);
+      } catch (e) {
+          console.error('Error parsing JSON:', e);
+      }
+  }
 }
 
   render() {
