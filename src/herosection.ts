@@ -67,13 +67,6 @@ export class HeroSection extends LitElement {
 `;
 connectedCallback() {
   super.connectedCallback();
-  if (typeof this.data === 'string') {
-      try {
-          this.data = JSON.parse(this.data);
-      } catch (e) {
-          console.error('Error parsing JSON:', e);
-      }
-  }
 }
 
   render() {
